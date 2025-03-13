@@ -93,6 +93,9 @@ final class EventDriver extends AbstractDriver
             $this->handle->free();
             unset($this->handle);
         }
+
+        /** @psalm-suppress TooFewArguments https://github.com/JetBrains/phpstorm-stubs/pull/763 */
+        $this->handle = new \EventBase();
     }
 
     /**

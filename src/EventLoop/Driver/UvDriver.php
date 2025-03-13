@@ -80,6 +80,11 @@ final class UvDriver extends AbstractDriver
         };
     }
 
+    public function __destruct()
+    {
+        $this->handle = \uv_loop_new();
+    }
+
     /**
      * {@inheritdoc}
      */
